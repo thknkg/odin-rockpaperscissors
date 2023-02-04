@@ -1,0 +1,156 @@
+html,
+body, .container {
+    margin: 0px;
+    height: 100%;
+    width:100%;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.text {
+    color: white;
+    font-family: monospace;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 3;
+}
+
+/* Style for the header */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    flex: 1;
+}
+.ascii {
+    white-space: pre;
+    font-family: monospace;
+}
+
+.title {
+    display: flex;
+    font-size:1vw;
+    justify-content: center;
+}
+
+/* Style for the terminal-like cursor */
+.blinker {
+    opacity: 1;
+    margin-bottom: -2px;
+    height: 15px;
+    margin-left: -5px;
+    margin-left: -5px;
+    border-left: 7px solid white;
+    animation: blinker 0.9s steps(2, start) infinite;
+    
+}
+
+@keyframes blinker {
+    to {
+        visibility: hidden;
+    }
+}
+
+#blinker, #subheading {
+    display: inline-block;
+    align-self: center;
+}
+
+/* Style for the RPS buttons */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    position: relative
+}
+
+.option {
+    font-weight: bold;
+    white-space:pre;
+}
+
+/* Style for the score */
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the play again button */
+.replay {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+button {
+    background-color: black;
+    border-style: hidden;
+}
+
+
+/* Style for the credits */
+.credit {
+    position: absolute;
+    bottom: 5px;
+    flex: 1;
+}
+
+.replay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result {
+    font-size: large;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+}
+
+.result-text {
+    font-size:xx-large
+}
+
+#winscore {
+    color: green;
+}
+
+#losescore {
+    color:red;
+}

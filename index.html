@@ -5,10 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="index.js" defer></script>
+    <link href="style.css" rel="stylesheet">
 
 </head>
 <body>
-<div id="winner"></div>
-<script src="index.js"></script>
+    <div class="container">
+        <div class="header">
+            <div class="title ascii text">
+
+    ██████╗  ██████╗  ██████╗██╗  ██╗       ██████╗  █████╗ ██████╗ ███████╗██████╗        ███████╗ ██████╗██╗███████╗███████╗ ██████╗ ██████╗ ███████╗
+    ██╔══██╗██╔═══██╗██╔════╝██║ ██╔╝       ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗       ██╔════╝██╔════╝██║██╔════╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
+    ██████╔╝██║   ██║██║     █████╔╝        ██████╔╝███████║██████╔╝█████╗  ██████╔╝       ███████╗██║     ██║███████╗███████╗██║   ██║██████╔╝███████╗
+    ██╔══██╗██║   ██║██║     ██╔═██╗        ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗       ╚════██║██║     ██║╚════██║╚════██║██║   ██║██╔══██╗╚════██║
+    ██║  ██║╚██████╔╝╚██████╗██║  ██╗▄█╗    ██║     ██║  ██║██║     ███████╗██║  ██║▄█╗    ███████║╚██████╗██║███████║███████║╚██████╔╝██║  ██║███████║
+    ╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝    ╚══════╝ ╚═════╝╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+                                                                                                                                                    
+
+            </div>
+            <div id="subheading" class="text">
+                <span class="blinker" id="blinker">&#32;</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="options">
+                <button id="rock" class="ascii text option">
+    _______
+ ---'   ____)
+        (_____)
+        (_____)
+        (____)
+---.__(___)
+                </button>
+
+                <button id="paper" class="ascii text option">     
+_______
+ ---'   ____)____
+            ______)
+            _______)
+            _______)
+---.__________)
+                </button>
+
+                <button id="scissors" class="ascii text option">_______
+ ---'   ____)____
+            ______)
+        __________)
+        (____)
+---.__(___)
+                </button>
+
+            </div>
+            <div class="scores">
+                <ul>
+                    <li class="score text">Wins
+                        <div id="winscore">0</div>
+                    </li>
+                    <li class="score text">Losses
+                        <div id="losescore">0</div>
+                    </li>
+                    <li class="score text">Draws
+                        <div id="drawscore">0</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="replay">
+                <div class="result text"></div>
+                <button class="ascii text" id="replay">
+██████╗ ██╗      █████╗ ██╗   ██╗     █████╗  ██████╗  █████╗ ██╗███╗   ██╗██████╗ 
+██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝    ██╔══██╗██╔════╝ ██╔══██╗██║████╗  ██║╚════██╗
+██████╔╝██║     ███████║ ╚████╔╝     ███████║██║  ███╗███████║██║██╔██╗ ██║  ▄███╔╝
+██╔═══╝ ██║     ██╔══██║  ╚██╔╝      ██╔══██║██║   ██║██╔══██║██║██║╚██╗██║  ▀▀══╝ 
+██║     ███████╗██║  ██║   ██║       ██║  ██║╚██████╔╝██║  ██║██║██║ ╚████║  ██╗   
+╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝  ╚═╝   
+                                                                                
+                </button>
+            </div>
+        </div> 
+        <div class="credit text">
+            ASCII Rock, Paper, Scissors hands copied from user wynand1004 on Github.
+        </div>
+    </div>
 </body>
 </html>
